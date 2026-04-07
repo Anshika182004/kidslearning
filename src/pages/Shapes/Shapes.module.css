@@ -1,0 +1,92 @@
+.shapesPage {
+  padding: 4rem 0rem;
+  background: var(--bg-color);
+  min-height: 100vh;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+.header h1 {
+  font-size: 3.5rem;
+  color: var(--purple);
+}
+
+.header p {
+  font-size: 1.5rem;
+  color: var(--text-muted);
+}
+
+.shapesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 3rem;
+  padding-bottom: 6rem;
+}
+
+.shapeCard {
+  background: white;
+  border-radius: var(--radius);
+  padding: 3rem;
+  text-align: center;
+  box-shadow: var(--shadow-soft);
+  border-bottom: 8px solid var(--shape-color);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.iconBox {
+  background: rgba(0, 0, 0, 0.03);
+  padding: 2rem;
+  border-radius: 50%;
+  width: 140px;
+  height: 140px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+
+.shapeCard:hover .iconBox {
+  transform: rotate(15deg) scale(1.1);
+  background: white;
+}
+
+.shapeImg {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+}
+
+.info h2 {
+  font-size: 2.2rem;
+  color: var(--text-main);
+  margin-bottom: 0.5rem;
+}
+
+.props {
+  font-size: 1rem;
+  color: var(--text-muted);
+  margin-bottom: 1.5rem;
+}
+
+.spellingBadge {
+  display: inline-block;
+  padding: 0.5rem 1.5rem;
+  background: var(--shape-color);
+  color: white;
+  border-radius: 50px;
+  font-weight: 900;
+  letter-spacing: 2px;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 480px) {
+  .shapesGrid {
+    grid-template-columns: 1fr;
+  }
+}

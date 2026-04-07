@@ -1,0 +1,23 @@
+.wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.mainContent {
+  flex: 1;
+  padding-top: 80px; /* Offset for sticky nav */
+  width: 100%;
+}
+
+.footer {
+  padding: 4rem 1rem;
+  text-align: center;
+  background: var(--bg-color);
+  border-top: 2px dashed rgba(0, 0, 0, 0.05);
+  color: var(--text-muted);
+}
+
+.footer p {
+  margin-bottom: 0.5rem;
+}

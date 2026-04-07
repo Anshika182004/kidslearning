@@ -1,0 +1,200 @@
+.alphabetsPage {
+  padding: 4rem 0rem;
+  background: var(--bg-color);
+  min-height: 100vh;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.header h1 {
+  font-size: 3.5rem;
+  color: var(--primary);
+  margin-bottom: 1rem;
+}
+
+.header p {
+  font-size: 1.5rem;
+  color: var(--text-muted);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+  padding-bottom: 4rem;
+}
+
+.alphabetCard {
+  background: white;
+  border-radius: var(--radius);
+  padding: 2rem;
+  text-align: center;
+  cursor: pointer;
+  box-shadow: var(--shadow-soft);
+  position: relative;
+  overflow: hidden;
+  transition: box-shadow 0.3s ease;
+  min-height: 350px;
+}
+
+.alphabetCard:hover {
+  box-shadow: var(--shadow-hover);
+}
+
+.letterWrapper {
+  font-size: 5rem;
+  font-weight: 900;
+  color: var(--secondary);
+  line-height: 1;
+  margin-bottom: 1rem;
+  font-family: 'Bubblegum Sans', cursive;
+}
+
+.word {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: var(--text-main);
+}
+
+.mainImg {
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+  margin-bottom: 1rem;
+  border-radius: 12px;
+}
+
+.hint {
+  font-size: 0.9rem;
+  color: var(--primary);
+  font-weight: 600;
+  opacity: 0.6;
+}
+
+/* Overlay & Expanded Card */
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.expandedCard {
+  background: white;
+  border-radius: calc(var(--radius) * 2);
+  width: 100%;
+  max-width: 900px;
+  max-height: 90vh;
+  padding: 4rem;
+  position: relative;
+  overflow-y: auto;
+  box-shadow: 0 40px 100px rgba(0, 0, 0, 0.2);
+}
+
+.closeBtn {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  background: var(--bg-color);
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-main);
+  transition: all 0.3s ease;
+}
+
+.closeBtn:hover {
+  background: var(--primary);
+  color: white;
+  transform: rotate(90deg);
+}
+
+.expandedLayout {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 4rem;
+}
+
+.leftCol {
+  text-align: center;
+}
+
+.bigLetter {
+  font-size: 10rem;
+  color: var(--primary);
+  line-height: 1;
+  margin-bottom: 1rem;
+  font-family: 'Bubblegum Sans', cursive;
+}
+
+.bigWord {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+
+.bigImg {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 40px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+.rightCol h3 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: var(--secondary);
+}
+
+.extraGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.extraItem {
+  background: var(--bg-color);
+  padding: 1.5rem;
+  border-radius: var(--radius);
+  text-align: center;
+}
+
+.extraItem img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 0.5rem;
+}
+
+.extraItem span {
+  display: block;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.moreComing {
+  font-size: 1.2rem;
+  color: var(--text-muted);
+}
+
+@media (max-width: 768px) {
+  .expandedLayout {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .bigLetter {
+    font-size: 6rem;
+  }
+}

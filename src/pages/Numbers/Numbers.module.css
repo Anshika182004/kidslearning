@@ -1,0 +1,97 @@
+.numbersPage {
+  padding: 4rem 0rem;
+  background: var(--bg-color);
+  min-height: 100vh;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+.header h1 {
+  font-size: 3.5rem;
+  color: var(--secondary);
+  margin-bottom: 1rem;
+}
+
+.header p {
+  font-size: 1.5rem;
+  color: var(--text-muted);
+}
+
+.numbersGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  padding-bottom: 6rem;
+}
+
+.numberCard {
+  background: white;
+  border-radius: var(--radius);
+  padding: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: var(--shadow-soft);
+  gap: 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.numberDisplay {
+  display: flex;
+  flex-direction: column;
+}
+
+.value {
+  font-size: 8rem;
+  font-weight: 900;
+  color: var(--primary);
+  line-height: 1;
+  font-family: 'Bubblegum Sans', cursive;
+}
+
+.spelling {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  margin-left: 0.5rem;
+}
+
+.itemsList {
+  background: var(--bg-color);
+  padding: 2rem;
+  border-radius: 40px;
+  flex: 1;
+  max-width: 500px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.itemIcon {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.plusMore {
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: var(--secondary);
+}
+
+@media (max-width: 768px) {
+  .numberCard {
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem;
+  }
+  .value {
+    font-size: 6rem;
+  }
+}

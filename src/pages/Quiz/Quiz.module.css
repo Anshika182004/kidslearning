@@ -1,0 +1,169 @@
+.quizPage {
+  padding: 4rem 0rem;
+  background: var(--bg-color);
+  min-height: 100vh;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.header h1 {
+  font-size: 3.5rem;
+  color: var(--primary);
+}
+
+.header p {
+  font-size: 1.5rem;
+  color: var(--text-muted);
+}
+
+.selectionGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  padding-bottom: 4rem;
+}
+
+.catIcon {
+  font-size: 4rem;
+  margin-bottom: 1.5rem;
+  background: var(--bg-color);
+  width: 120px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.catCard {
+  background: white;
+  border: none;
+  border-radius: var(--radius);
+  padding: 3rem 2rem;
+  box-shadow: var(--shadow-soft);
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  items-align: center;
+  justify-content: center;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.catCard:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--shadow-hover);
+  background: var(--primary);
+  color: white;
+}
+
+.catCard:hover .catIcon {
+  transform: scale(1.1) rotate(15deg);
+  background: white;
+  color: var(--primary);
+}
+
+.quizStage {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.progress {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  margin-bottom: 2rem;
+}
+
+.qCard {
+  background: white;
+  padding: 4rem;
+  border-radius: var(--radius) * 2;
+  box-shadow: var(--shadow-hover);
+}
+
+.questionText {
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  color: var(--text-main);
+  font-family: 'Bubblegum Sans', cursive;
+}
+
+.optionsGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.optBtn {
+  padding: 2rem;
+  background: var(--bg-color);
+  border-radius: var(--radius);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-main);
+  transition: all 0.2s ease;
+}
+
+.optBtn:hover {
+  background: var(--secondary);
+  color: white;
+  transform: scale(1.02);
+}
+
+.resultBox {
+  max-width: 600px;
+  margin: 0 auto;
+  background: white;
+  padding: 5rem;
+  border-radius: var(--radius);
+  text-align: center;
+  box-shadow: var(--shadow-hover);
+}
+
+.scoreCircle {
+  width: 200px;
+  height: 200px;
+  background: var(--accent);
+  border-radius: 50%;
+  margin: 3rem auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 6rem;
+  font-weight: 900;
+  color: white;
+  box-shadow: 0 20px 40px rgba(255, 230, 109, 0.4);
+}
+
+.resultBox p {
+  font-size: 1.8rem;
+  margin-bottom: 3rem;
+  color: var(--text-main);
+}
+
+.btnReset {
+  padding: 1.5rem 3rem;
+  background: var(--primary);
+  color: white;
+  border-radius: 50px;
+  font-size: 1.3rem;
+  font-weight: 700;
+  transition: all 0.3s ease;
+}
+
+.btnReset:hover {
+  transform: scale(1.1);
+  box-shadow: 0 15px 30px rgba(255, 107, 107, 0.3);
+}
+
+@media (max-width: 600px) {
+  .optionsGrid {
+    grid-template-columns: 1fr;
+  }
+}
